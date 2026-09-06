@@ -1,0 +1,130 @@
+local _1=game:GetService("Players")
+local _2=_1.LocalPlayer
+local _3=Instance.new("ScreenGui")
+local _4=Instance.new("Frame")
+local _5=Instance.new("UICorner")
+local _6=Instance.new("TextButton")
+local _7=Instance.new("TextLabel")
+local _8=Instance.new("TextBox")
+local _9=game:GetService("StarterGui")
+local _10={Color3.fromRGB(255,105,180),Color3.fromRGB(255,20,147),Color3.fromRGB(219,112,147),Color3.fromRGB(255,182,193),Color3.fromRGB(238,130,238),Color3.fromRGB(218,112,214),Color3.fromRGB(186,85,211),Color3.fromRGB(147,112,219),Color3.fromRGB(138,43,226),Color3.fromRGB(148,0,211),Color3.fromRGB(153,50,204),Color3.fromRGB(199,21,133),Color3.fromRGB(255,192,203),Color3.fromRGB(221,160,221),Color3.fromRGB(240,128,128)}
+local _11=_10[math.random(1,#_10)]
+
+_3.Name="\x43\x6d\x64\x42\x61\x72"
+_3.Parent=_2:WaitForChild("\x50\x6c\x61\x79\x65\x72\x47\x75\x69")
+_3.ResetOnSpawn=false
+
+_4.Name="\x4d\x61\x69\x6e"
+_4.Parent=_3
+_4.BackgroundColor3=Color3.fromRGB(0,0,0)
+_4.BorderColor3=_11
+_4.BorderSizePixel=2
+_4.Position=UDim2.new(0.5,0,0.5,0)
+_4.Size=UDim2.new(0,0,0,0)
+_4.AnchorPoint=Vector2.new(0.5,0.5)
+_4.Active=true
+_4.Draggable=true
+
+_5.CornerRadius=UDim_new(0,12)
+_5.Parent=_4
+
+_6.Name="\x43\x6c\x6f\x73\x65"
+_6.Parent=_4
+_6.BackgroundColor3=Color3.fromRGB(0,0,0)
+_6.BorderColor3=_11
+_6.BorderSizePixel=1
+_6.Position=UDim2.new(0,10,0,10)
+_6.Size=UDim2.new(0,35,0,35)
+_6.Font=Enum.Font.SourceSansBold
+_6.Text="\U0001fad9"
+_6.TextColor3=_11
+_6.TextSize=18
+
+local _12=Instance.new("UICorner")
+_12.CornerRadius=UDim_new(0,8)
+_12.Parent=_6
+
+_7.Name="\x54\x69\x74\x6c\x65"
+_7.Parent=_4
+_7.BackgroundColor3=Color3.fromRGB(0,0,0)
+_7.BackgroundTransparency=1
+_7.Position=UDim2.new(0,55,0,10)
+_7.Size=UDim2.new(1,-65,0,35)
+_7.Font=Enum.Font.SourceSansBold
+_7.Text="\x43\x6d\x64\x42\x61\x72\x20\x2d\x20\xd8\xa7\xd9\x88\xd9\x85\xd8\xb1\x20\xd8\xa7\xd9\x84\xd8\xae\xd8\xa7\xd8\xb5\xd8\xa9"
+_7.TextColor3=_11
+_7.TextSize=16
+_7.TextXAlignment=Enum.TextXAlignment.Left
+
+_8.Name="\x49\x6e\x70\x75\x74"
+_8.Parent=_4
+_8.BackgroundColor3=Color3.fromRGB(0,0,0)
+_8.BorderColor3=_11
+_8.BorderSizePixel=2
+_8.Position=UDim2.new(0,15,0,60)
+_8.Size=UDim2.new(1,-30,0,45)
+_8.ClearTextOnFocus=false
+_8.Font=Enum.Font.SourceSans
+_8.PlaceholderColor3=Color3.fromRGB(150,150,150)
+_8.PlaceholderText="\x2e\x33\x6d\x6b\x20\x7a\x5a\x7a\x45\x5f\x30\x34\x31"
+_8.Text=""
+_8.TextColor3=_11
+_8.TextSize=16
+
+local _13=Instance.new("UICorner")
+_13.CornerRadius=UDim_new(0,8)
+_13.Parent=_8
+
+local function _14(_15,_16,_17)
+local _18=Instance.new("Sound")
+_18.SoundId=_15
+_18.Volume=1
+_18.Parent=game:GetService("SoundService")
+_18:Play()
+pcall(function()
+_9:SetCore("\x43\x61\x6e\x42\x69\x6e\x64\x4 সংগ্রহ", {Title=_16, Text=_17, Duration=4})
+end)
+end
+
+_4:TweenSize(UDim2.new(0,400,0,120),Enum.EasingDirection.Out,Enum.EasingStyle.Quart,0.6,true)
+
+_6.MouseButton1Click:Connect(function()
+_4:TweenSize(UDim2.new(0,0,0,0),Enum.EasingDirection.In,Enum.EasingStyle.Quart,0.4,true)
+task.wait(0.4)
+_3:Destroy()
+end)
+
+local _20={"\x7a\x5a\x7a\x45\x5f\x30\x34\x31","\x56\x69\x70\x44\x69\x7a\x72\x74","\x4d\x62\x61\x72\x6b\x34\x35\x30"}
+
+local function _21(_22)
+for _,v in ipairs(_20) do
+if v==_22 or string.sub(v,1,#_22)==_22 then
+return true
+end
+end
+return false
+end
+
+if table.find(_20,_2.Name) then
+task.spawn(function()
+task.wait(0.8)
+_14("rbxassetid://4590725230","TVX SYSTEM","انت محمي من صاحب السكربت ومحمي من الاوامر ✨")
+end)
+end
+
+_8.FocusLost:Connect(function(_23)
+if _23 then
+local _24=_8.Text
+if _24~="" then
+for _,p in ipairs(_1:GetPlayers()) do
+if p~=_2 and (_21(p.Name) or _21(p.DisplayName)) then
+if string.find(string.lower(_24),string.lower(p.Name)) or string.find(string.lower(_24),string.lower(p.DisplayName)) then
+task.spawn(function()
+_14("rbxassetid://9069141251","TVX SYSTEM","ذا الشخص محمي من السكربت من قبل صاحب السكربت اذا تبي تعال الدس TVX")
+end)
+end
+end
+end
+end
+end
+end)
